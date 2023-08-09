@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+.App {
+  background-image: linear-gradient(
+    to right,
+    #eea2a2 0%,
+    #bbc1bf 19%,
+    #57c6e1 42%,
+    #b49fda 79%,
+    #7ac5d8 100%
+  );
+}
+
+.md-previewer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.sub-hero {
+  padding: 10px 20px;
+  background-color: rgb(254, 183, 195);
+  color: white;
+}
+
+.ed {
+  background-color: rgb(0, 235, 235);
+}
+
+.preview-wrap {
+  background-color: pink;
+  max-width: 50vw;
+  height: 100%;
+  /* border: 2px solid red; */
+}
+
+.editor-wrap {
+  background-color: aqua;
+}
+
+#editor {
+  border: none;
+  width: 100%;
+  height: 92%;
+  padding: 20px 15px;
+  outline: none;
+  background-color: aqua;
+}
+
+/* Previewer Styling */
+#preview {
+  padding: 20px 50px;
+}
+
+#preview blockquote {
+  border-left: 3px solid #194c62;
+  color: #253c3c;
+  padding-left: 5px;
+  margin: 20px 25px;
+}
+#preview > p > code {
+  padding: 3px;
+}
+#preview code {
+  background: rgb(255, 234, 245);
+  font-size: 0.875rem;
+  border-radius: 5px;
+}
+#preview pre {
+  display: block;
+  overflow: auto;
+  border-radius: 5px;
+  background: rgb(255, 234, 245);
+  padding: 5px;
+  line-height: 1.2;
+}
+#preview h1,
+#preview h2,
+#preview h3,
+#preview > p,
+#preview > ul,
+#preview > ol {
+  margin: 15px 0;
+}
+
+#preview table {
+  border-collapse: collapse;
+}
+#preview td,
+#preview th {
+  border: 2px solid #000000;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#preview img {
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .md-previewer {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100svw;
+  }
+
+  .preview-wrap {
+    background-color: pink;
+    max-width: 100vw;
+  }
+
+  #editor {
+    border: none;
+    width: 100%;
+    height: 50vh;
+  }
+}
